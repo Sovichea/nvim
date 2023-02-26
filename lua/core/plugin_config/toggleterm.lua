@@ -1,4 +1,8 @@
----@diagnostic disable: undefined-global
+
+vim.keymap.set('n', '<C-t>f', ':ToggleTerm direction="float"<CR>')
+vim.keymap.set('n', '<C-t>h', ':ToggleTerm direction="horizontal"<CR>')
+vim.keymap.set('n', '<C-t>v', ':ToggleTerm size=60 direction="vertical"<CR>')
+
 local on_open = function(_)
     local opts = {buffer = 0}
     vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)

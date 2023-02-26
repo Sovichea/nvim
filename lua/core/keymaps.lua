@@ -19,11 +19,3 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-
-vim.keymap.set('n', '<C-t>f', ':ToggleTerm direction="float"<CR>')
-vim.keymap.set('n', '<C-t>h', ':ToggleTerm direction="horizontal"<CR>')
-vim.keymap.set('n', '<C-t>v', ':ToggleTerm size=60 direction="vertical"<CR>')
-
-local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<Leader>nc", ":lua require('neogen').generate({ type = 'class' })<CR>", opts)
