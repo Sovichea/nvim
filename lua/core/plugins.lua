@@ -14,6 +14,15 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     'rakr/vim-one',
     'ellisonleao/gruvbox.nvim',
+    {
+        'AlexvZyl/nordic.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require 'nordic' .load()
+        end
+    },
+    { "catppuccin/nvim", name = "catppuccin" },
 
     -- core function
     'wbthomason/packer.nvim',
@@ -54,18 +63,18 @@ local plugins = {
 
     -- git
     {'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim'},
-  
+
     -- dashboard 
     {
-      'glepnir/dashboard-nvim',
-      event = 'VimEnter',
-      config = function()
-        require('dashboard').setup {
-          -- config
-        }
-      end,
-      dependencies = { {'nvim-tree/nvim-web-devicons'}}
-    }
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+        dependencies = { {'nvim-tree/nvim-web-devicons'}}
+    },
+
+    -- barbar
+    {'romgrk/barbar.nvim', dependencies = 'nvim-tree/nvim-web-devicons'},
+
+    { "lukas-reineke/indent-blankline.nvim" },
 }
 
 

@@ -19,6 +19,9 @@
 - Alt: switch window/tab
     - w: window
     - t: tab
+    - c: close buffer
+    - [: previous buffer
+    - ]: next buffer
 
 - g: goto
     - d: definition
@@ -31,6 +34,7 @@
 
 # Custom Commands
 
-- qt: clost tab
-- gdiff: show git diff with file tree
-- ghist: show git diff with commit history
+- qt: close tab
+- git: open git terminal
+- termh: open terminal in horizontal
+- termv: open terminal in vertical

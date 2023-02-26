@@ -5,19 +5,13 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-vim.keymap.set('n', '<C-t>g', '<cmd>lua _lazygit_toggle()<CR>', {noremap = true, silent = true})
-vim.keymap.set('n', '<C-t>h', ':ToggleTerm direction="horizontal"<CR>')
-vim.keymap.set('n', '<C-t>v', ':ToggleTerm size=60 direction="vertical"<CR>')
-
-local on_open = function(_)
-    local opts = {buffer = 0}
-    vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-end
+vim.keymap.set('c', 'git', 'lua _lazygit_toggle()<CR>', {noremap = true, silent = true})
+vim.keymap.set('c', 'termh', 'ToggleTerm direction="horizontal"<CR>')
+vim.keymap.set('c', 'termv', 'ToggleTerm size=60 direction="vertical"<CR>')
 
 require("toggleterm").setup{
-    on_open = on_open,
     float_opts = {
-        border = 'curved',
+        border = 'single',
     },
     shell = 'nu',
 }
