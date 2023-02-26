@@ -54,6 +54,18 @@ local plugins = {
 
     -- git
     {'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim'},
+  
+    -- dashboard 
+    {
+      'glepnir/dashboard-nvim',
+      event = 'VimEnter',
+      config = function()
+        require('dashboard').setup {
+          -- config
+        }
+      end,
+      dependencies = { {'nvim-tree/nvim-web-devicons'}}
+    }
 }
 
 
