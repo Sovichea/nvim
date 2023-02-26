@@ -51,6 +51,9 @@ local plugins = {
 
     -- commenter
     'terrortylor/nvim-comment',
+
+    -- git
+    {'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim'},
 }
 
 

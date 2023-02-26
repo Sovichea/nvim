@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>dox", ":lua require('neogen').generate()<CR>", opts)
 
 require('neogen').setup {
     enabled = true,             --if you want to disable Neogen
