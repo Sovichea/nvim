@@ -14,7 +14,9 @@ vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+-- line number setup
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
