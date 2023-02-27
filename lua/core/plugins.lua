@@ -54,6 +54,7 @@ local plugins = {
         -- Uncomment next line if you want to follow only stable versions
         -- version = "*" 
     },
+    'p00f/clangd_extensions.nvim',
 
     -- terminal
     {'akinsho/toggleterm.nvim', version = "*", config = true},
