@@ -3,12 +3,12 @@ require('lualine').setup {
         icon_enabled = true,
         theme = 'auto',
     },
-    sections = {
-        lualine_a = {
-            {
-                'filename',
-                path = 1,
-            }
-        }
-    }
+    -- sections = {
+    --     lualine_a = {
+    --         {
+    --             'filename',
+    --             path = 1,
+    --         }
+    --     }
+    -- }
 }

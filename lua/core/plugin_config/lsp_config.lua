@@ -14,7 +14,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
     vim.keymap.set('n', 'gs', require('telescope.builtin').lsp_document_symbols, {})
     vim.keymap.set('n', 'gS', require('telescope.builtin').lsp_workspace_symbols, {})
-    vim.keymap.set('n', 'gx', require('telescope.builtin').diagnostics, {})
+    vim.keymap.set('n', 'gx', '<Cmd>TroubleToggle<CR>', {})
     vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, {})
 end
 
